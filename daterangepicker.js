@@ -710,7 +710,7 @@
             var lastMonth = lastMonthDate.getMonth();
 
             var lastYearDate = new Date(firstDay);
-            lastYearDate.setFullYear(lastYearDate.getFullYear() - 1);
+            lastYearDate.setMonth(lastYearDate.getMonth() - 1);
             var lastYear = lastYearDate.getFullYear();
             var daysInLastMonth = new Date(lastYear, lastMonth + 1, 0).getDate();
             var dayOfWeek = firstDay.getDay();
