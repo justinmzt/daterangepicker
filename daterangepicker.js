@@ -1301,11 +1301,11 @@
         clickPrev: function(e) {
             var cal = $(e.target).parents('.drp-calendar');
             if (cal.hasClass('left')) {
-                this.leftCalendar.month.subtract(1, 'month');
+                this.leftCalendar.month.setMonth(this.leftCalendar.month.getMonth() - 1);
                 if (this.linkedCalendars)
-                    this.rightCalendar.month.subtract(1, 'month');
+                    this.rightCalendar.month.setMonth(this.rightCalendar.month.getMonth() - 1);
             } else {
-                this.rightCalendar.month.subtract(1, 'month');
+                this.rightCalendar.month.setMonth(this.rightCalendar.month.getMonth() - 1);
             }
             this.updateCalendars();
         },
@@ -1313,11 +1313,11 @@
         clickNext: function(e) {
             var cal = $(e.target).parents('.drp-calendar');
             if (cal.hasClass('left')) {
-                this.leftCalendar.month.add(1, 'month');
+                this.leftCalendar.month.setMonth(this.leftCalendar.month.getMonth() + 1);
             } else {
-                this.rightCalendar.month.add(1, 'month');
+                this.rightCalendar.month.setMonth(this.rightCalendar.month.getMonth() + 1);
                 if (this.linkedCalendars)
-                    this.leftCalendar.month.add(1, 'month');
+                    this.leftCalendar.month.setMonth(this.leftCalendar.month.getMonth() + 1);
             }
             this.updateCalendars();
         },
